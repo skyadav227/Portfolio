@@ -1,0 +1,144 @@
+/* ============================================================
+   CURRENTLY LEARNING SECTION
+   ============================================================ */
+.learning-section {
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.learning-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 30% 50%, rgba(124, 92, 252, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.learning-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 16px auto 0;
+  text-align: center;
+}
+
+/* Learning Grid */
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 48px;
+}
+
+/* Learning Card */
+.learning-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 28px 20px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  cursor: default;
+  overflow: hidden;
+  transition:
+    border-color var(--transition-smooth),
+    transform var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+}
+
+.learning-card:hover {
+  border-color: var(--topic-color, var(--accent-primary));
+  box-shadow: 0 12px 40px rgba(124, 92, 252, 0.15);
+}
+
+/* Glow background on hover */
+.learning-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, var(--topic-color) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+  pointer-events: none;
+}
+
+.learning-card:hover .learning-glow {
+  opacity: 0.08;
+}
+
+/* Icon */
+.learning-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(124, 92, 252, 0.08);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-smooth);
+}
+
+.learning-card:hover .learning-icon-wrap {
+  background: rgba(124, 92, 252, 0.15);
+  border-color: var(--topic-color, var(--accent-primary));
+}
+
+.learning-icon {
+  color: var(--topic-color, var(--accent-primary));
+  transition: transform var(--transition-spring);
+}
+
+.learning-card:hover .learning-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Text */
+.learning-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Progress indicator */
+.learning-progress-wrap {
+  width: 100%;
+}
+
+.learning-progress-bar {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.learning-progress-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--grad-primary);
+  transform-origin: left;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .learning-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

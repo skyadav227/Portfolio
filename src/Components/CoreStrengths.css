@@ -1,0 +1,137 @@
+/* ============================================================
+   CORE STRENGTHS SECTION
+   ============================================================ */
+.strengths-section {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.strengths-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0, 212, 255, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Strengths Grid */
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+/* Strength Card */
+.strength-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 32px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  cursor: default;
+  overflow: hidden;
+  transition:
+    border-color var(--transition-smooth),
+    transform var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+}
+
+.strength-card:hover {
+  border-color: var(--strength-color, var(--accent-primary));
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Glow background on hover */
+.strength-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, var(--strength-color) 0%, transparent 65%);
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+  pointer-events: none;
+}
+
+.strength-card:hover .strength-glow {
+  opacity: 0.1;
+}
+
+/* Icon */
+.strength-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: rgba(124, 92, 252, 0.1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.strength-card:hover .strength-icon-wrap {
+  background: rgba(124, 92, 252, 0.18);
+  border-color: var(--strength-color, var(--accent-primary));
+  box-shadow: 0 0 30px var(--strength-color);
+}
+
+.strength-icon {
+  color: var(--strength-color, var(--accent-primary));
+  transition: transform var(--transition-spring);
+}
+
+.strength-card:hover .strength-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Content */
+.strength-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.strength-name {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.strength-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Bottom accent line */
+.strength-accent-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--strength-color, var(--accent-primary));
+  transform-origin: left;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .strengths-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .strengths-grid {
+    grid-template-columns: 1fr;
+  }
+}
