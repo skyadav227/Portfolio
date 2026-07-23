@@ -96,6 +96,9 @@ My flagship MERN Stack project.
 
 Cortex is a modern full-stack web application built using the MERN stack, showcasing backend development, database integration, REST APIs, authentication, and responsive frontend design.
 
+- **Live Demo:** https://cortex-22tk.vercel.app/
+- **GitHub:** https://github.com/skyadav227/Cortex
+
 ---
 
 ## 💻 Other Projects
@@ -103,6 +106,9 @@ Cortex is a modern full-stack web application built using the MERN stack, showca
 ### 🛒 ShopSphere
 
 A modern React-based e-commerce application featuring product listings, API integration, responsive UI, shopping cart functionality, and state management.
+
+- **Live Demo:** https://shopsphere-nine-nu.vercel.app/Home
+- **GitHub:** https://github.com/skyadav227/ShopSphere
 
 More exciting projects are currently under development.
 
