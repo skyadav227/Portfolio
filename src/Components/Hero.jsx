@@ -241,6 +241,7 @@ export default function Hero() {
             </motion.a>
             <motion.a
               href="/resume.pdf"
+              download
               className="btn-outline"
               target="_blank"
               rel="noopener noreferrer"

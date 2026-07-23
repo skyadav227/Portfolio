@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sher Karthikeya Yadav — Resume</title>
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Base ── */
+    html { font-size: 10.5pt; }
+
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.45;
+      padding: 0.6in 0.65in 0.55in;
+      max-width: 8.5in;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    .header { text-align: center; margin-bottom: 10px; }
+
+    .header h1 {
+      font-size: 18pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #0d0d0d;
+      margin-bottom: 5px;
+    }
+
+    .header .contact-line {
+      font-size: 9.5pt;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+    }
+
+    .header .contact-line a {
+      color: #1a56db;
+      text-decoration: none;
+    }
+
+    .header .contact-line a:hover { text-decoration: underline; }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1.5px solid #1a1a1a;
+      margin: 8px 0 6px;
+    }
+
+    .divider-thin {
+      border: none;
+      border-top: 0.75px solid #ccc;
+      margin: 5px 0 6px;
+    }
+
+    /* ── Section ── */
+    .section { margin-bottom: 10px; }
+
+    .section-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #0d0d0d;
+      margin-bottom: 5px;
+    }
+
+    /* ── Objective ── */
+    .objective p {
+      font-size: 9.8pt;
+      color: #2a2a2a;
+      line-height: 1.55;
+    }
+
+    /* ── Education ── */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .edu-left .degree {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0d0d0d;
+    }
+
+    .edu-left .institution {
+      font-size: 9.5pt;
+      color: #444;
+    }
+
+    .edu-right {
+      text-align: right;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .edu-right .cgpa {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0d0d0d;
+    }
+
+    .edu-right .years {
+      font-size: 9.2pt;
+      color: #555;
+    }
+
+    /* ── Skills ── */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .skills-table td {
+      font-size: 9.5pt;
+      padding: 1.5px 0;
+      vertical-align: top;
+      color: #1a1a1a;
+    }
+
+    .skills-table td:first-child {
+      font-weight: 700;
+      white-space: nowrap;
+      padding-right: 8px;
+      width: 110px;
+      color: #0d0d0d;
+    }
+
+    /* ── Projects ── */
+    .project { margin-bottom: 9px; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .project-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0d0d0d;
+    }
+
+    .project-links {
+      font-size: 9pt;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .project-links a {
+      color: #1a56db;
+      text-decoration: none;
+      margin-left: 6px;
+    }
+
+    .project-links a:hover { text-decoration: underline; }
+
+    .project-stack {
+      font-size: 9pt;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    .project-desc {
+      font-size: 9.5pt;
+      color: #2a2a2a;
+      line-height: 1.5;
+      margin-bottom: 3px;
+    }
+
+    .project ul {
+      margin: 0 0 0 14px;
+      padding: 0;
+    }
+
+    .project ul li {
+      font-size: 9.4pt;
+      color: #2a2a2a;
+      line-height: 1.5;
+      margin-bottom: 1.5px;
+    }
+
+    /* ── Soft skills ── */
+    .soft-skills {
+      font-size: 9.5pt;
+      color: #2a2a2a;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body {
+        padding: 0.55in 0.6in 0.5in;
+        font-size: 10.2pt;
+      }
+
+      a { color: #1a56db !important; }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ HEADER ══════════════════════════════════════════════ -->
+  <header class="header">
+    <h1>Sher Karthikeya Yadav</h1>
+    <div class="contact-line">
+      <span><strong>Mobile:</strong> <a href="tel:+918977696987">+91 8977696987</a></span>
+      <span>|</span>
+      <span><strong>Mail:</strong> <a href="mailto:karthikeyayadav547@gmail.com">karthikeyayadav547@gmail.com</a></span>
+      <span>|</span>
+      <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sher-karthikeya-yadav-009193226/" target="_blank">linkedin.com/in/sher-karthikeya-yadav</a></span>
+      <span>|</span>
+      <span><strong>GitHub:</strong> <a href="https://github.com/skyadav227" target="_blank">github.com/skyadav227</a></span>
+    </div>
+  </header>
+
+  <hr class="divider" />
+
+  <!-- ══ CAREER OBJECTIVE ════════════════════════════════════ -->
+  <section class="section objective">
+    <p class="section-title">Career Objective</p>
+    <p>
+      Computer Science graduate with a strong foundation in MERN stack development, including React.js,
+      Node.js, Express.js, and MongoDB. Passionate about building scalable web applications and eager to
+      start my career as a Software Engineer while continuously learning and improving my technical skills.
+    </p>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ══ EDUCATION ══════════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-title">Education</p>
+    <div class="edu-row">
+      <div class="edu-left">
+        <p class="degree">Bachelor of Technology in Computer Science</p>
+        <p class="institution">St. Mary's Integrated Campus</p>
+      </div>
+      <div class="edu-right">
+        <p class="cgpa">CGPA: 7.41</p>
+        <p class="years">2022 – 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ══ TECHNICAL SKILLS ════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-title">Technical Skills</p>
+    <table class="skills-table">
+      <tbody>
+        <tr>
+          <td>Languages</td>
+          <td>JavaScript, Python</td>
+        </tr>
+        <tr>
+          <td>Frontend</td>
+          <td>HTML5, CSS3, React.js, Bootstrap</td>
+        </tr>
+        <tr>
+          <td>Backend</td>
+          <td>Node.js, Express.js</td>
+        </tr>
+        <tr>
+          <td>Databases</td>
+          <td>MongoDB, MySQL</td>
+        </tr>
+        <tr>
+          <td>Concepts</td>
+          <td>REST APIs, JWT Authentication, CRUD Operations, Responsive Web Design</td>
+        </tr>
+        <tr>
+          <td>Tools</td>
+          <td>Git, GitHub, Postman, VS Code, Vercel</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ══ PROJECTS ════════════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-title">Projects</p>
+
+    <!-- Cortex -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Cortex – AI Powered MERN Chat Application</span>
+        <span class="project-links">
+          <a href="https://github.com/skyadav227/Cortex" target="_blank">GitHub</a>
+          <a href="https://cortex-22tk.vercel.app/" target="_blank">Live Demo</a>
+        </span>
+      </div>
+      <p class="project-stack">| React.js, Node.js, Express.js, MongoDB, JWT Authentication, REST APIs |</p>
+      <p class="project-desc">
+        Built a full-stack AI-powered chat application that enables users to interact with an intelligent
+        assistant through a modern and responsive interface. Designed with secure user authentication,
+        efficient data management, and a scalable REST API architecture.
+      </p>
+      <ul>
+        <li>Developed a full-stack chat application using React.js, Node.js, Express.js, and MongoDB.</li>
+        <li>Implemented secure user authentication and authorization using JWT and bcrypt.</li>
+        <li>Designed RESTful APIs for user authentication, chat management, and database operations using Express.js and Mongoose.</li>
+        <li>Built a responsive and user-friendly interface with reusable React components for a seamless chat experience.</li>
+      </ul>
+    </div>
+
+    <hr class="divider-thin" />
+
+    <!-- ShopSphere -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">ShopSphere – E-commerce Frontend Application</span>
+        <span class="project-links">
+          <a href="https://github.com/skyadav227/ShopSphere" target="_blank">GitHub</a>
+          <a href="https://shopsphere-nine-nu.vercel.app/Home" target="_blank">Live Demo</a>
+        </span>
+      </div>
+      <p class="project-stack">| React.js, JavaScript, Bootstrap, REST APIs |</p>
+      <p class="project-desc">
+        Developed a responsive e-commerce frontend application that allows users to browse products,
+        manage their shopping cart, and interact with real-time product data through API integration.
+        Focused on creating a clean user interface and smooth shopping experience.
+      </p>
+      <ul>
+        <li>Built reusable React components for product listing, product details, and shopping cart functionality.</li>
+        <li>Integrated REST APIs to fetch and display dynamic product information.</li>
+        <li>Implemented state management for cart operations and responsive layouts across different screen sizes.</li>
+        <li>Designed a modern and intuitive user interface using Bootstrap and custom CSS.</li>
+      </ul>
+    </div>
+
+    <hr class="divider-thin" />
+
+    <!-- Portfolio -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Personal Portfolio</span>
+        <span class="project-links">
+          <a href="https://github.com/skyadav227/portfolio" target="_blank">GitHub</a>
+          <a href="https://portfolio-kappa-three-61.vercel.app/" target="_blank">Live Demo</a>
+        </span>
+      </div>
+      <p class="project-stack">| React.js, JavaScript, CSS3, Framer Motion |</p>
+      <p class="project-desc">
+        Designed and developed a modern personal portfolio website to showcase technical skills, projects,
+        and professional profile through an interactive and responsive user experience.
+      </p>
+      <ul>
+        <li>Developed a responsive portfolio using React.js with reusable components and a modular architecture.</li>
+        <li>Implemented smooth animations and interactive UI elements using Framer Motion to enhance user experience.</li>
+        <li>Showcased projects, technical skills, and professional information with a clean, intuitive, recruiter-friendly interface.</li>
+        <li>Optimized the application for responsiveness and performance across desktop, tablet, and mobile devices.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ══ SOFT SKILLS ════════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-title">Soft Skills</p>
+    <p class="soft-skills">
+      Problem Solving &nbsp;|&nbsp; Communication &nbsp;|&nbsp; Team Collaboration &nbsp;|&nbsp;
+      Adaptability &nbsp;|&nbsp; Quick Learning &nbsp;|&nbsp; Time Management
+    </p>
+  </section>
+
+</body>
+</html>
