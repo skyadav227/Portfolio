@@ -8,7 +8,7 @@ Designed with a focus on clean architecture, smooth animations, responsive desig
 
 ## 🌐 Live Demo
 
-🔗 **Portfolio:** https://your-vercel-url.vercel.app
+🔗 **Portfolio:** https://portfolio-kappa-three-61.vercel.app/
 
 ---
 
