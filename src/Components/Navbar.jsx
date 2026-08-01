@@ -96,7 +96,7 @@ export default function Navbar() {
 
         {/* Resume CTA */}
         <motion.a
-          href="/resume.pdf"
+          href="/resume.html"
           className="nav-resume-btn"
           target="_blank"
           rel="noopener noreferrer"

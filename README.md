@@ -196,7 +196,7 @@ npm run build
 
 ## 📫 Connect With Me
 
-* 💻 GitHub: h[ttps://github.com/your-username](https://github.com/skyadav227)
+* 💻 GitHub: https://github.com/skyadav227
 * 💼 LinkedIn: https://www.linkedin.com/in/sher-karthikeya-yadav-009193226/
 * 🌐 Portfolio: https://portfolio-kappa-three-61.vercel.app/
 * 📧 Email: [karthikeyayadav547@gmail.com](mailto:karthikeyayadav547@gmail.com)
